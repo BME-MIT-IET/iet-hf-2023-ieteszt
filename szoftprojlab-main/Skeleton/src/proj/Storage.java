@@ -63,8 +63,10 @@ public class Storage extends Field {
 
 		if (!mat.remove(m)) {
 			logger.warning("Remove(m) Hiba, nem tudom ezt a Materialt torolni mert nincsen a listaban!");
-		} else
+		} else{
 			mat.remove(m);
+		}
+			
 	}
 
 	/**
@@ -72,7 +74,7 @@ public class Storage extends Field {
 	 */
 	@Override
 	public void drawIconOnField(Graphics g, GameFrame frame) {
-		if (mat.isEmpty()) {
+		if (!mat.isEmpty()) {
 			int nucleotid = 0;
 			int aminoacid = 0;
 			MaterialVisitor visitor = new MaterialVisitor();

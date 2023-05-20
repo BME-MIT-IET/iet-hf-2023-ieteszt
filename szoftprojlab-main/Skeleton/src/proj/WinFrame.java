@@ -23,7 +23,7 @@ public class WinFrame extends JFrame{
 	 */
 	public WinFrame()
 	{
-		this.setSize(200,200);
+		this.setSize(250,250);
         this.setLocationRelativeTo(null); 
 		ImageIcon winp= new ImageIcon("./Pictures/WinFrame.png");
 		this.setTitle("You won!");

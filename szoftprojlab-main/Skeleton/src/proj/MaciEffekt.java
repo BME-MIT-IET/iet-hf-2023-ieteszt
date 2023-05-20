@@ -31,14 +31,16 @@ public class MaciEffekt extends Effect {
 		if (v.getField() != null) {
 			Field f = v.getField();
 			for (Virologist virologus : f.getVirologist()) {
-				if (virologus.canAttack(true) && !virologus.equals(v))
+				if (virologus.canAttack(true) && !virologus.equals(v)) {
 					virologus.AddEffect(new MaciEffekt());
+				}					
 			}
 			v.MoveRandom();
 			f = v.getField();
 			for (Virologist virologus : f.getVirologist()) {
-				if (virologus.canAttack(true) && !virologus.equals(v))
-					virologus.AddEffect(new MaciEffekt());
+				if (virologus.canAttack(true) && !virologus.equals(v)) {
+					virologus.AddEffect(new MaciEffekt());	
+				}					
 			}
 			f.Use(v);
 		}

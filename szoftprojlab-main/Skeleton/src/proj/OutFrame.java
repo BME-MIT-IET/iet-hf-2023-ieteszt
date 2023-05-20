@@ -5,21 +5,21 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * 	Kezeli a képernyõn lévõ gombokat, és hogy azok lenyomásánál mi fog történni
+ * 	Kezeli a kï¿½pernyï¿½n lï¿½vï¿½ gombokat, ï¿½s hogy azok lenyomï¿½sï¿½nï¿½l mi fog tï¿½rtï¿½nni
  *
  */
 public class OutFrame extends JFrame {
 	/**
-	 *  Ezt adjuk, majd át a hozzá tartozó gomboknak ezt tárolja, hogy milyen függvényt kell a gomb lenyomás esetén meghívni
+	 *  Ezt adjuk, majd ï¿½t a hozzï¿½ tartozï¿½ gomboknak ezt tï¿½rolja, hogy milyen fï¿½ggvï¿½nyt kell a gomb lenyomï¿½s esetï¿½n meghï¿½vni
 	 */
 	int mithiv;
 	ArrayList<Button> gombok = new ArrayList<Button>();
-	//Konstruktoroknak azért van 3 paraméterre, mert különben azonosak lennének hiáaba különbözõk a listák
+	//Konstruktoroknak azï¿½rt van 3 paramï¿½terre, mert kï¿½lï¿½nben azonosak lennï¿½nek hiï¿½aba kï¿½lï¿½nbï¿½zï¿½k a listï¿½k
 	/**
-	 * konstruktor, amikor a felhasználó Virologusok közül tud választani
+	 * konstruktor, amikor a felhasznï¿½lï¿½ Virologusok kï¿½zï¿½l tud vï¿½lasztani
 	 * @param vir megkapja hogy melyik virologusok kozul kell valasztani
 	 * @param mithiv megkapja, hogy milyen tevekenyseghez kell ez a valasztas
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public OutFrame(List<Virologist> vir, int mithiv, GameController controller) {
 		this.setSize(450, 470);
@@ -41,11 +41,11 @@ public class OutFrame extends JFrame {
 		this.setVisible(true);
 	}
 	/**
-	 * konstruktor, amikor a felhasználó Gearek közül tud választani
-	 * @param gears megkapja milyen felszerelések közül kell választani
+	 * konstruktor, amikor a felhasznï¿½lï¿½ Gearek kï¿½zï¿½l tud vï¿½lasztani
+	 * @param gears megkapja milyen felszerelï¿½sek kï¿½zï¿½l kell vï¿½lasztani
 	 * @param mithiv megkapja, hogy milyen tevekenyseghez kell ez a valasztas
-	 * @param i csak azért van, hogy ne legyen gond az azonos konstruktorrokkal
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param i csak azï¿½rt van, hogy ne legyen gond az azonos konstruktorrokkal
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public OutFrame(List<Gear> gears, int mithiv, int i, GameController controller) {
 		this.setSize(450, 470);
@@ -68,11 +68,11 @@ public class OutFrame extends JFrame {
 		//TODO grafika
 	}
 	/**
-	 * konstruktor, amikor a felhasználó Agens közül tud választani
-	 * @param agens megkapja milyen ágensek közül kell választani
+	 * konstruktor, amikor a felhasznï¿½lï¿½ Agens kï¿½zï¿½l tud vï¿½lasztani
+	 * @param agens megkapja milyen ï¿½gensek kï¿½zï¿½l kell vï¿½lasztani
 	 * @param mithiv megkapja, hogy milyen tevekenyseghez kell ez a valasztas
-	 * @param i csak azért van, hogy ne legyen gond az azonos konstruktorrokkal
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param i csak azï¿½rt van, hogy ne legyen gond az azonos konstruktorrokkal
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public OutFrame(List<Agens> agens, int mithiv, double i, GameController controller) {
 		this.setSize(450, 470);
@@ -94,11 +94,11 @@ public class OutFrame extends JFrame {
 		this.setVisible(true);
 	}
 	/**
-	 * konstruktor, amikor a felhasználó Field közül tud választani
-	 * @param fields megkapja milyen mezõk közül kell választani
+	 * konstruktor, amikor a felhasznï¿½lï¿½ Field kï¿½zï¿½l tud vï¿½lasztani
+	 * @param fields megkapja milyen mezï¿½k kï¿½zï¿½l kell vï¿½lasztani
 	 * @param mithiv megkapja, hogy milyen tevekenyseghez kell ez a valasztas
-	 * @param i csak azért van, hogy ne legyen gond az azonos konstruktorrokkal
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param i csak azï¿½rt van, hogy ne legyen gond az azonos konstruktorrokkal
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public OutFrame(List<Field> fields, int mithiv, float i, GameController controller) {
 		this.setSize(450, 470);
@@ -120,11 +120,11 @@ public class OutFrame extends JFrame {
 		this.setVisible(true);
 	}
 	/**
-	 * konstruktor, amikor a felhasználó Code közül tud választani
-	 * @param codes megkapja milyen kódok közül kell választani
+	 * konstruktor, amikor a felhasznï¿½lï¿½ Code kï¿½zï¿½l tud vï¿½lasztani
+	 * @param codes megkapja milyen kï¿½dok kï¿½zï¿½l kell vï¿½lasztani
 	 * @param mithiv megkapja, hogy milyen tevekenyseghez kell ez a valasztas
-	 * @param i csak azért van, hogy ne legyen gond az azonos konstruktorrokkal
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param i csak azï¿½rt van, hogy ne legyen gond az azonos konstruktorrokkal
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public OutFrame(List<Code> codes, int mithiv, char i, GameController controller) {
 		this.setSize(450, 470);

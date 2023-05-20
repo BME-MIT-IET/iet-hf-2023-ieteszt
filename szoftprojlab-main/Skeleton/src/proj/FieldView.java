@@ -3,20 +3,20 @@
 import java.awt.Graphics;
 
 /**
- *	Field osztály örököl belõle, és kezeli a pálya mezõinek a megjelenítését
+ *	Field osztï¿½ly ï¿½rï¿½kï¿½l belï¿½le, ï¿½s kezeli a pï¿½lya mezï¿½inek a megjelenï¿½tï¿½sï¿½t
  */
 public interface FieldView {
 	/**
-	 * kirajzolja a mezõket
+	 * kirajzolja a mezï¿½ket
 	 */
 	public void drawField(Graphics g, GameFrame frame);
 	/**
-	 * kiraljzolja a mezõket összekötõvonalakat
+	 * kiraljzolja a mezï¿½ket ï¿½sszekï¿½tï¿½vonalakat
 	 */
 	public void drawNeigbourLine(Graphics g, GameFrame frame);
 	
 	/**
-	 * kirajzolja a macit és a virológust a mezõre
+	 * kirajzolja a macit ï¿½s a virolï¿½gust a mezï¿½re
 	 */
 	public void drawIconOnField(Graphics g, GameFrame frame);	
 
