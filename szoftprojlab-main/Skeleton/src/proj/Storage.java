@@ -4,44 +4,47 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
-/** 
- * Egy speci�lis mez�, amire a virol�gus l�phet 
- * Ez a mez� tartalmazhat anyagokat, 
+/**
+ * Egy speci�lis mez�, amire a virol�gus l�phet
+ * Ez a mez� tartalmazhat anyagokat,
  * amik sz�ks�gesek az �gensek elk�sz�t�shez.
-*/
-public class Storage extends Field
-{
+ */
+public class Storage extends Field {
+	private static final Logger logger = Logger.getLogger(Storage.class.getName());
+
 	/**
 	 * A mez�n l�ve� anyagok list�ja
 	 */
 	List<Material> mat;
+
 	/**
 	 * Storage konstruktora
 	 * l�trehozza a list�t
 	 */
-	public  Storage() {
+	public Storage() {
 		mat = new ArrayList<Material>();
 	}
+
 	/**
 	 * Materi�l hozz�ada�sa a rakt�rhoz
 	 */
-	public void matAdd(Material m) 
-	{
+	public void matAdd(Material m) {
 		mat.add(m);
 	}
-	/** 
+
+	/**
 	 * A param�terk�nt kapott virol�gusnak �tadja a mat v�ltoz� tartalm�t
 	 * Ha MaciEffect- van rajta, akkor a mez�r�l mindent elt�ntett, megesik
-	 *@param v Melyik virol�gus vesszi fele a rakt�rb�l a dolgokat
+	 * 
+	 * @param v Melyik virol�gus vesszi fele a rakt�rb�l a dolgokat
 	 */
 	@Override
-	public void Use(Virologist v)
-	{
-		EffectVisitor visit= new EffectVisitor();
-		for(int i = 0;i<v.getEffect().size();i++) {
-			if(v.getEffect().get(i).Accept(visit)==7)
-			{
+	public void Use(Virologist v) {
+		EffectVisitor visit = new EffectVisitor();
+		for (int i = 0; i < v.getEffect().size(); i++) {
+			if (v.getEffect().get(i).Accept(visit) == 7) {
 				mat.clear();
 				return;
 			}
@@ -50,58 +53,63 @@ public class Storage extends Field
 			v.PickupMaterial(mat.get(0));
 		}
 	}
-	
-	/** 
+
+	/**
 	 * A mat v�ltoz� list�b�l t�rli a param�terk�nt kapott Material-t(anyagot)
+	 * 
 	 * @param m Melyik anyag legyen t�r�lve
 	 */
-	public void Remove(Material m)
-	{
-		if(!mat.remove(m)) System.out.println("Remove(m) Hiba,nem tudom ezt a Materialt torolni mert nincsen a listaban!");
-		else mat.remove(m);
+	public void Remove(Material m) {
+
+		if (!mat.remove(m)) {
+			logger.warning("Remove(m) Hiba, nem tudom ezt a Materialt torolni mert nincsen a listaban!");
+		} else
+			mat.remove(m);
 	}
+
 	/**
 	 * Kirajzolja a mez�n tal�lhat� dolgokat ha van rajta valami
 	 */
 	@Override
 	public void drawIconOnField(Graphics g, GameFrame frame) {
-		if(mat.isEmpty()) {
-			int nucleotid=0;
-			int aminoacid=0;
+		if (mat.isEmpty()) {
+			int nucleotid = 0;
+			int aminoacid = 0;
 			MaterialVisitor visitor = new MaterialVisitor();
-			for(Material m: mat) {
-				if(m.Accept(visitor)==1)
+			for (Material m : mat) {
+				if (m.Accept(visitor) == 1)
 					aminoacid++;
-				if(m.Accept(visitor)==2)
+				if (m.Accept(visitor) == 2)
 					nucleotid++;
 			}
-			Graphics2D g2d = (Graphics2D)g;
-			if(aminoacid>0 && nucleotid>0) {
+			Graphics2D g2d = (Graphics2D) g;
+			if (aminoacid > 0 && nucleotid > 0) {
 				Image image;
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/AminoAcid.png");
-				g2d.drawImage(image, x, y,40,40, frame);
+				g2d.drawImage(image, x, y, 40, 40, frame);
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/Nucleotid.png");
-				g2d.drawImage(image, x+45, y,40,40, frame);
-			} else if(aminoacid>0) {
+				g2d.drawImage(image, x + 45, y, 40, 40, frame);
+			} else if (aminoacid > 0) {
 				Image image;
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/AminoAcid.png");
-				g2d.drawImage(image, x, y,40,40, frame);
-			} else if(nucleotid>0) {
+				g2d.drawImage(image, x, y, 40, 40, frame);
+			} else if (nucleotid > 0) {
 				Image image;
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/Nucleotid.png");
-				g2d.drawImage(image, x, y,40,40, frame);
+				g2d.drawImage(image, x, y, 40, 40, frame);
 			}
 		}
 	}
+
 	/**
 	 * Kirajzolja az storage-t mez�t
 	 */
 	@Override
 	public void drawField(Graphics g, GameFrame frame) {
-		Graphics2D g2d = (Graphics2D)g;
+		Graphics2D g2d = (Graphics2D) g;
 		Image image;
 		image = Toolkit.getDefaultToolkit().getImage("./Pictures/Storage.jpg");
-		g2d.drawImage(image, x, y,150,100, frame);
-		g2d.drawString(this.id, (x+140), (y+15));
+		g2d.drawImage(image, x, y, 150, 100, frame);
+		g2d.drawString(this.id, (x + 140), (y + 15));
 	}
 }

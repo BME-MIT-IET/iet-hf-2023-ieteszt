@@ -233,12 +233,13 @@ public class Virologist implements Steppable {
 	 */
 	public void Attack(Agens a, Virologist v, boolean capeHaEffect) {
 		if (!CheckParalyzedEffect()) {
-			boolean canAttack = false;
-			if (!capeHaEffect)
-				canAttack = v.Attacked(this, a, capeHaEffect);
+			if (!capeHaEffect) {
+				v.Attacked(this, a, capeHaEffect);
+			}
 			inventory.RemoveAgens(a);
 		}
 	}
+	
 
 	/**
 	 * A virol�gusra r�kent egy m�sik virol�gus a param�terk�nt kapott
@@ -301,7 +302,6 @@ public class Virologist implements Steppable {
 		EffectVisitor visit = new EffectVisitor();
 		for (int i = 0; i < effects.size(); i++) {
 			if (effects.get(i).Accept(visit) == 8) {
-				aldozat = null;
 				effects.remove(i);
 			}
 		}

@@ -64,13 +64,13 @@ public class Refuge extends Field
 		if(gear!=null) {
 			Graphics2D g2d = (Graphics2D)g;
 			Image image=null;
-			if(gear.getClass()==new Glove().getClass())
+			if(gear instanceof Glove)
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/Glove.png");
-			if(gear.getClass()==new BackPack().getClass())
+			if(gear instanceof BackPack)
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/Backpack.png");
-			if(gear.getClass()==new Cape().getClass())
+			if(gear instanceof Cape)
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/Cape.png");
-			if(gear.getClass()==new Axe().getClass())
+			if(gear instanceof Axe)
 				image = Toolkit.getDefaultToolkit().getImage("./Pictures/Axe.png");
 			if(image!=null) {
 				g2d.drawImage(image, x, y,40,40, frame);

@@ -46,6 +46,7 @@ public class Code {
 	public int getCost_to_make_N() {
 		logger.info("\tgetCost_to_make_N() Agens Nucleotid �r�nak legk�rdez�se");
 		logger.info("\tgetCost_to_make_N() " + cost_to_make_N + " return");
+		
 		return cost_to_make_N;
 	}
 
