@@ -410,27 +410,6 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 
 ## Main.java: 
 Remove this object instantiation and use "Laboratory.class" instead.
-<<<<<<< Updated upstream
-fields.get(i).getClass() == new Laboratory.getClass() => fields.get(i) instanceof Laboratory
-
-Remove this object instantiation and use "StunV.class" instead.
-
-if (virologists.get(i).getinventory().GetAgens().get(j).getClass().equals(new StunV().getClass())) {
-	statsall += ("StunV]");
-}
-
-javítás: 
-
-if (virologists.get(i).getinventory().GetAgens().get(j) instanceof StunV) {
-	statsall += ("StunV]");
-}
-## Refuge.java
-gear.getClass()==new BackPack().getClass()
-Remove this object instantiation and use "Glove.class" instead.
-javítás: gear instanceof BackPack
-
-## WinFrame.java
-=======
 
 `fields.get(i).getClass() == new Laboratory.getClass()` => `fields.get(i) instanceof Laboratory`
 
@@ -457,17 +436,12 @@ javítás:
 
 ## WinFrame.java
 
->>>>>>> Stashed changes
 	ok.addActionListener( new ActionListener() {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			System.exit(0);	
 		}	
 	});
-<<<<<<< Updated upstream
-Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.)
-javítás: 
-=======
 
 Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.)
 
@@ -475,5 +449,4 @@ Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 
 javítás: 
 	
 	
->>>>>>> Stashed changes
 	ok.addActionListener(e -> System.exit(0));
