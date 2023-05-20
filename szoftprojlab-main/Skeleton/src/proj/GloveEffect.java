@@ -29,9 +29,7 @@ public class GloveEffect extends Effect
 	@Override
 	public int Accept(IVisitor v)
 	{
-		//System.out.println("\tAccept(i)IVisitorM pattern haszn�lata");
 		int x=v.Visit(this);
-		//System.out.println("\tAccept(i) "+x+" return");
 		return x;
 	}
 	/**
@@ -44,7 +42,7 @@ public class GloveEffect extends Effect
 	{
 		duration--;
 		if(duration==0) {
-			v.RemoveEffect(this); //TODO check j�-e
+			v.RemoveEffect(this);
 			glove=null;
 		}
 	}
@@ -57,6 +55,6 @@ public class GloveEffect extends Effect
 	 * Az oszt�ly konstruktora
 	 */
 	public GloveEffect() {
-		id="gloveEffect";//+(int)(Math.random()*1000);
+		id="gloveEffect";
 	}
 }

@@ -64,8 +64,6 @@ public class Code
 	 * @return cost_to_make_A
 	 */
 	public int getCost_to_make_A() {
-		//System.out.println("\tgetCost_to_make_A() Agens aminosav �r�nak legk�rdez�se");
-		//System.out.println("\tgetCost_to_make_A() "+cost_to_make_A+" return");
 		return cost_to_make_A;
 	}
 	/**
@@ -78,7 +76,7 @@ public class Code
 		cost_to_make_N=cost_N;
 		cost_to_make_A=cost_A;
 		agens=a;
-		id="code";//;+(int)(Math.random()*1000);
+		id="code";
 	}
 
 }

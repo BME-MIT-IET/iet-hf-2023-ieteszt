@@ -28,6 +28,6 @@ public class CapeEffect extends Effect
 	 * Az oszt�ly konstruktora
 	 */
 	public CapeEffect() {
-		id="capeEffect";//+(int)(Math.random()*1000);
+		id="capeEffect";
 	}
 }

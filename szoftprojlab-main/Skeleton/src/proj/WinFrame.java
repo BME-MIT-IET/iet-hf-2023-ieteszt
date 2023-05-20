@@ -1,8 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
-import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,11 +9,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * A nyerés képernyõ kiratása
+ * A nyerï¿½s kï¿½pernyï¿½ kiratï¿½sa
  */
 public class WinFrame extends JFrame{
 	/**
-	 * A rajta lévõ gomb, amivel be lehet zárni az egészet
+	 * A rajta lï¿½vï¿½ gomb, amivel be lehet zï¿½rni az egï¿½szet
 	 */
 	JButton ok = new JButton("OK");
 	/**
@@ -25,7 +21,7 @@ public class WinFrame extends JFrame{
 	 */
 	JLabel l= new JLabel("");
 	/**
-	 * A konstruktora létrehozza az ablakot
+	 * A konstruktora lï¿½trehozza az ablakot
 	 */
 	public WinFrame()
 	{

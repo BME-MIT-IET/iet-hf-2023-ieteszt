@@ -28,6 +28,6 @@ public class BackPackEffect extends Effect
 	 * Az oszt�ly konstruktora
 	 */
 	public BackPackEffect() {
-		id="backPackEffect";//+(int)(Math.random()*1000);
+		id="backPackEffect";
 	}
 }

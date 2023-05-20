@@ -23,7 +23,6 @@ public abstract class Effect
 	 */
 	public void Decrease(Virologist v)
 	{
-		//System.out.println("\tDecrease(v) Effect bomlik �s eggyel kevesebb k�rig marad �letben");
 		duration=duration-1;
 		if(duration<=0)
 			v.RemoveEffect(this);
@@ -36,8 +35,6 @@ public abstract class Effect
 	 */
 	public int Accept(IVisitor v)
 	{
-		//System.out.println("\tAccept(i)IVisitor pattern haszn�lata");
-		//System.out.println("\tAccept(i) 0 return");
 		return 0;
 	}
 	

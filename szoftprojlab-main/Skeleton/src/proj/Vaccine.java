@@ -26,7 +26,6 @@ public class Vaccine extends Agens
 	 */
 	public void Use(Virologist v)
 	{
-		//System.out.println("\tUse(v) Vaccine haszn�lata");
 		v.AddEffect(vre);
 	}
 }

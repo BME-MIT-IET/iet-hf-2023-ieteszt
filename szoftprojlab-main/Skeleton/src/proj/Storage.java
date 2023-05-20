@@ -28,9 +28,7 @@ public class Storage extends Field
 	 */
 	public void matAdd(Material m) 
 	{
-		//System.out.println("\tmatAdd(m)  Anyag felv�tele rakt�rba");
 		mat.add(m);
-		//System.out.println("\tmatAdd(m)  void return");
 	}
 	/** 
 	 * A param�terk�nt kapott virol�gusnak �tadja a mat v�ltoz� tartalm�t
@@ -40,7 +38,6 @@ public class Storage extends Field
 	@Override
 	public void Use(Virologist v)
 	{
-		//System.out.println("\tUse(v) Anyag felv�tel rakt�rb�l.");
 		EffectVisitor visit= new EffectVisitor();
 		for(int i = 0;i<v.getEffect().size();i++) {
 			if(v.getEffect().get(i).Accept(visit)==7)
@@ -52,7 +49,6 @@ public class Storage extends Field
 		while (!mat.isEmpty() && v.getinventory().Getmax_Material() != v.getinventory().getMaterial().size()) {
 			v.PickupMaterial(mat.get(0));
 		}
-		//System.out.println("\tUse(v) void return");
 	}
 	
 	/** 
@@ -61,10 +57,8 @@ public class Storage extends Field
 	 */
 	public void Remove(Material m)
 	{
-		//System.out.println("\tRemove(m) Anyag t�rl�se a rakt�rb�l.");
 		if(!mat.remove(m)) System.out.println("Remove(m) Hiba,nem tudom ezt a Materialt torolni mert nincsen a listaban!");
 		else mat.remove(m);
-		//System.out.println("\tRemove(m) void return");
 	}
 	/**
 	 * Kirajzolja a mez�n tal�lhat� dolgokat ha van rajta valami

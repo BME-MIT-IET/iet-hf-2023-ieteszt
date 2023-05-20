@@ -73,7 +73,6 @@ public class Field implements FieldView
 	 */
 	public void Accept(Virologist v)
 	{
-		//System.out.println("\tAccept(v) Virol�gus hozz�ad�dik egy mez�h�z");
 		virologist.add(v);
 		v.setFields(this);
 	}
@@ -93,7 +92,6 @@ public class Field implements FieldView
 	 */
 	public void Remove(Virologist v)
 	{
-		//System.out.println("\tRemove(v) Az adott mez� elhagyja a Virologus");
 		virologist.remove(v);
 	}
 	
@@ -111,9 +109,7 @@ public class Field implements FieldView
 	 */
 	public Field GetRandomNeighbor()
 	{
-		//System.out.println("\tGetRandomNeighbor() Egy random szomsz�dos mez�t kapunk meg a mez�t�l");
         Random rand = new Random();
-        //System.out.println("\tGetRandomNeighbor() Field return");
         return neighbors.get(rand.nextInt(neighbors.size()));
 	}
 	/**

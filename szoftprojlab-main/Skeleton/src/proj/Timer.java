@@ -17,7 +17,6 @@ public class Timer
 	 */
 	public void Run()
 	{
-		//System.out.println("\tRun() Timer l�ptett minden Steappable-t");
 		for(int i=0; i<steppable.size();i++)
 			steppable.get(i).Step();
 	}

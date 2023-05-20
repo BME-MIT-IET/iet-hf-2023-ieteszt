@@ -12,16 +12,14 @@ public class VirusResistentEffect extends Effect
 	@Override
 	public int Accept(IVisitor v)
 	{
-		//System.out.println("\tAccept(i)IVisitorM pattern haszn�lata");
 		int x=v.Visit(this);
-		//System.out.println("\tAccept(i) "+x+" return");
 		return x;
 	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */
 	public VirusResistentEffect() {
-		id="virusResistentEffect";//+(int)(Math.random()*1000);
+		id="virusResistentEffect";
 		duration=2;
 	}
 }

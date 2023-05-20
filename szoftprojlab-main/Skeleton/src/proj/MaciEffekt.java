@@ -13,9 +13,7 @@ public class MaciEffekt extends Effect {
 	@Override
 	public int Accept(IVisitor v)
 	{
-		//System.out.println("\tAccept(i)IVisitorM pattern haszn�lata");
 		int x=v.Visit(this);
-		//System.out.println("\tAccept(i) "+x+" return");
 		return x;
 	}
 	
@@ -46,6 +44,6 @@ public class MaciEffekt extends Effect {
 	 * Az oszt�ly konstruktora
 	 */
 	public MaciEffekt() {
-		id="maciEffect";//+(int)(Math.random()*1000);
+		id="maciEffect";
 	}
 }

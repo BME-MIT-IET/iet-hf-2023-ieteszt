@@ -53,8 +53,6 @@ public class Inventory
 	 */
 	public int MatSize() 
 	{
-		//System.out.println("\tMatSize()  Materialok sz�m�nak lek�rdez�se a Invenotryb�l.");
-		//System.out.println("\tMatSize() "+mat.size()+" return");
 		return mat.size();
 	}
 	/**
@@ -64,7 +62,6 @@ public class Inventory
 	 */
 	public void setmax_material(int i)
 	{
-		//System.out.println("\tsetmax_material(i)  Materialok  maximum�nak be�ll�t�sa.");
 		max_material=i;
 	}
 	/**
@@ -74,8 +71,6 @@ public class Inventory
 	 */
 	public int Getmax_Material() 
 	{
-		//System.out.println("\tGetmax_Material()  Materialok maximum sz�m�nak lek�rdez�se a Invenotryb�l.");
-		//System.out.println("\tGetmax_Material()  "+max_material+" return");
 		return max_material;
 	}
 	/**
@@ -85,8 +80,6 @@ public class Inventory
 	 */
 	public int Gearssize()
 	{
-		//System.out.println("\tGearssize() Az inventoryban l�v� felszerel�sek sz�m�nak lek�rdez�se");
-		//System.out.println("\tGearssize() "+gears.size()+" return");
 		return gears.size();
 	}
 	/**
@@ -96,8 +89,6 @@ public class Inventory
 	 */
 	public int Getmax_Gear()
 	{
-		//System.out.println("\tGetmax_Gear() Az inventoryban lehet� maxim�lis felszerel�sek sz�m�nak lek�rdez�se");
-		//System.out.println("\tGetmax_Gear() "+max_gear+" return");
 		return max_gear;
 	}
 	/** 
@@ -106,7 +97,6 @@ public class Inventory
 	 */
 	public void AddGear(Gear g)
 	{
-		//System.out.println("\tAddGear(g) Felszerel�s hozz�ad�sa az inventoryhoz");
 		gears.add(g);
 	}
 	
@@ -116,7 +106,6 @@ public class Inventory
 	 */
 	public void RemoveGear(Gear g)
 	{
-		//System.out.println("\tRemoveGear(g) Felszerel�s elv�tele az inventoryb�l");
 		gears.remove(g);
 	}
 	/** 
@@ -124,7 +113,6 @@ public class Inventory
 	 * @param m Melyik anyag ker�l az inventoryba*/
 	public void AddMaterial(Material m)
 	{
-		//System.out.println("\tAddMaterial(m) Anyag hozz�ad�sa az inventoryhoz");
 		mat.add(m);
 	}
 	
@@ -133,7 +121,6 @@ public class Inventory
 	 * @param a Melyik �genst t�rli az inventoryb�l*/
 	public void RemoveAgens(Agens a)
 	{
-		//System.out.println("\tRemoveAgens(a) Agens elv�tel az inventoryb�l");
 		agens.remove(a);
 	}
 	
@@ -144,7 +131,6 @@ public class Inventory
 	 */
 	public void DecreaseAgens(Virologist v)
 	{
-		//System.out.println("\tDecreaseAgens(v) Minden Agens bontasa");
 		for(int i=0; i<agens.size();i++)
 			agens.get(i).Decrase(this);
 	}
@@ -156,7 +142,6 @@ public class Inventory
 	 */
 	public void Craft(Code c)
 	{
-		//System.out.println("\tCraft(c) Egy agens craftolasa");
 		int amino=0;
 		int nuc=0;
 		for(int i=0;i<mat.size();i++) 
@@ -187,7 +172,6 @@ public class Inventory
 						mat.remove(mat.get(d));
 					}
 				}
-		//System.out.println("\tCraft(c) void return");
 	}
 	
 	/** 
@@ -195,7 +179,6 @@ public class Inventory
 	 * @param a Melyik �gens legyen az inventoryhoz addva*/
 	public void AddAgens(Agens a)
 	{
-		//System.out.println("\tAddAgens(a) Agens hozz�ad�sa az inventoryhoz");
 		agens.add(a);
 	}
 	/**

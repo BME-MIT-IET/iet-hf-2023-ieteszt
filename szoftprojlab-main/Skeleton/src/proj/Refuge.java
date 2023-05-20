@@ -25,7 +25,6 @@ public class Refuge extends Field
 	 */
 	public void setGear(Gear g) 
 	{
-		//System.out.println("\tsetGear(g)  �vohelyhez felszerel�s hozz�ad�sa.");
 		gear=g;
 	}
 	/** 

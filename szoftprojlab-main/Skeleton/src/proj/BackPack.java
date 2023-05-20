@@ -28,8 +28,6 @@ public class BackPack extends Gear
 	 */
 	public BackPackEffect getPbe()
 	{
-		//System.out.println("\tgetPbe() pbe gettere megh�vodik");
-		//System.out.println("\tgetPbe() BackPackEffect return");
 		return pbe;
 	}
 	/** 
@@ -41,7 +39,6 @@ public class BackPack extends Gear
 	@Override
 	public void TakeGear(Virologist v)
 	{
-		//System.out.println("\tTakeGear(v) Addot gear-t a virologus felveszi");
 		v.getinventory().AddGear(this);
 		v.AddEffect(pbe);
 	}
@@ -54,7 +51,6 @@ public class BackPack extends Gear
 	@Override
 	public void TakeGearOff(Virologist v)
 	{
-		//System.out.println("\tTakeGearOff(v) Addot gear-t a virologus megsemm�siti");
 		v.RemoveEffect(pbe);
 		v.getinventory().RemoveGear(this);
 	}
@@ -66,8 +62,6 @@ public class BackPack extends Gear
 	 *  */
 	public void Steal(Virologist whoV, Virologist fromV)
 	{
-		//System.out.println("\tSteal(whoV, fromV) Addot gear-t a virologust�l elopta egy m�sik virologus");
-		//fromV.TakeGearOff(this);
 		this.TakeGearOff(fromV);
 		fromV.RemoveEffect(pbe);
 		whoV.AddGearFromSteal(this);
