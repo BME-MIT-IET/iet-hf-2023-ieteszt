@@ -1,7 +1,7 @@
 ## Manuális kódtesztelés
 Code smellek: 
 
-AxeEffect.java, BackPackEffect.java: Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.
+# AxeEffect.java, BackPackEffect.java: Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.
 javitas:
 
 Button.java: Make "obj" transient or serializable.
@@ -19,9 +19,7 @@ javítás: private static final Logger logger = Logger.getLogger(Code.class.getN
         // Privát konstruktor
     }
 
-GameController.java: Remove this object instantiation and use "Glove.class" instead.
-javítás: 
-g1.getClass()== new Glove().getClass() => g1.getClass()==Glove.class
+GameController.java: 
 
 Rename "x" which hides the field declared at line 14.
 javítás int x=1040 => x=1040
