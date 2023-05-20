@@ -1,7 +1,9 @@
 # Manuális kódtesztelés
-Code smellek: 
+Javítás előtt:
 
 ![alt text](1.png)
+
+![alt text](spotbugs1.png)
 
 ## AxeEffect.java, BackPackEffect.java: 
 *Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.*
@@ -472,3 +474,5 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 # Javítások eredménye:
 
 ![alt text](2.png)
+
+![alt text](spotbugs2.png)
