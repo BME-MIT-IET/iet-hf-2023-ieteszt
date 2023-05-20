@@ -1,6 +1,8 @@
 # Manuális kódtesztelés
 Készítette:Kopácsi Károly(ZLIYY4), Imets Ákos(D7H8G6)
 
+Spotbugs és SonarLint használatával.
+
 Javítás előtt:
 
 ![alt text](1.png)
