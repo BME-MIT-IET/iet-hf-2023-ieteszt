@@ -1,4 +1,6 @@
 # Manuális kódtesztelés
+Készítette:Kopácsi Károly(ZLIYY4), Imets Ákos(D7H8G6)
+
 Javítás előtt:
 
 ![alt text](1.png)
