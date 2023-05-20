@@ -23,7 +23,9 @@ public class BackPackEffect extends Effect
 	 *  mivel a BackPackEffect nem sz�nik meg a k�r�k hat�s�ra. 
 	 */
 	@Override
-	public void Decrease(Virologist v){}
+	public void Decrease(Virologist v){
+		// A Decrease metódus szándékosan üres.
+	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */

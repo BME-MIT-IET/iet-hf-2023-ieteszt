@@ -14,7 +14,7 @@ import java.awt.Font;
  * */
 public class Field implements FieldView
 {
-
+	Random rand = new Random();
 	/**
 	 * Egy id amivel tudjuk az adott mez�t a ki�r�sn�l azonos�tani a felhaszn�l� fogja hasszn�lni
 	 */
@@ -82,7 +82,7 @@ public class Field implements FieldView
 		return id;
 	}
 	
-	public void setid(String nid)
+	public void setNid(String nid)
 	{
 		 id=nid;
 	}
@@ -101,6 +101,7 @@ public class Field implements FieldView
 	 */
 	public void Use(Virologist v)
 	{
+		// A Use metódus szándékosan üres.
 	}
 	
 	/** 
@@ -109,7 +110,7 @@ public class Field implements FieldView
 	 */
 	public Field GetRandomNeighbor()
 	{
-        Random rand = new Random();
+        
         return neighbors.get(rand.nextInt(neighbors.size()));
 	}
 	/**

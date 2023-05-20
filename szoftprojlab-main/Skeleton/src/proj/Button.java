@@ -4,25 +4,25 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 /**
- *	Kezeli az összes OutFramen megjelenõ gombot
- * Egy konkrét gombot reprezentál
+ *	Kezeli az ï¿½sszes OutFramen megjelenï¿½ gombot
+ * Egy konkrï¿½t gombot reprezentï¿½l
  */
 public class Button extends JButton{
 	/**
-	 * Itt tárolja el amit kap adatokat, hogy õ mit reprezentál
+	 * Itt tï¿½rolja el amit kap adatokat, hogy ï¿½ mit reprezentï¿½l
 	 */
-	private Object obj;
+	private transient Object obj;
 	private OutFrame frame;
 	/**
-	 * 	Ezt kapja meg az OutFramebõl, ebbõl tudja, hogy lennyomás esetén minek kell meghívnia
+	 * 	Ezt kapja meg az OutFramebï¿½l, ebbï¿½l tudja, hogy lennyomï¿½s esetï¿½n minek kell meghï¿½vnia
 	 */
 	private int mithiv;
 	/**
 	 * A GameController megjegyzi
 	 */
-	private GameController controller;
+	private transient GameController controller;
 	/**
-	 * lenyomás funkcióját valósítja meg
+	 * lenyomï¿½s funkciï¿½jï¿½t valï¿½sï¿½tja meg
 	 */
 	public void Push() {
 		if(mithiv==0) {
@@ -40,13 +40,16 @@ public class Button extends JButton{
 		if(mithiv==3) {
 			controller.attack((Agens)obj);
 			this.setText("Attack");
-		}if(mithiv==4) {
+		}
+		if(mithiv==4) {
 			controller.dropitem((Gear)obj);
 			this.setText("Dropitem");
-		}if(mithiv==5) {
+		}
+		if(mithiv==5) {
 			controller.move((Field)obj);
 			this.setText("Move");
-		}if(mithiv==6) {
+		}
+		if(mithiv==6) {
 			controller.craft((Code) obj);
 			this.setText("Craft");
 		}
@@ -54,10 +57,10 @@ public class Button extends JButton{
 		controller.lep();
 	}
 	/**
-	 * konstruktor, amikor egy Virológust reprezentál a gomb
-	 * @param v amit reprezentál
+	 * konstruktor, amikor egy Virolï¿½gust reprezentï¿½l a gomb
+	 * @param v amit reprezentï¿½l
 	 * @param mithiv hogy mit kell hivnia mikor megtamadjak
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public Button(Virologist v, int mithiv, GameController controller,OutFrame f) {
 		this.controller = controller;
@@ -67,10 +70,10 @@ public class Button extends JButton{
 		frame=f;
 	}
 	/**
-	 * konstruktor, amikor egy Agenst reprezentál a gomb
-	 * @param a amit reprezentál
+	 * konstruktor, amikor egy Agenst reprezentï¿½l a gomb
+	 * @param a amit reprezentï¿½l
 	 * @param mithiv hogy mit kell hivnia mikor megtamadjak
-	* @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	* @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public Button(Agens a, int mithiv, GameController controller,OutFrame f) {
 		this.controller = controller;
@@ -80,10 +83,10 @@ public class Button extends JButton{
 		frame=f;
 		}
 	/**
-	 * konstruktor, amikor egy Code reprezentál a gomb
-	 * @param c amit reprezentál
+	 * konstruktor, amikor egy Code reprezentï¿½l a gomb
+	 * @param c amit reprezentï¿½l
 	 * @param mithiv hogy mit kell hivnia mikor megtamadjak
-	 * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	 * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public Button(Code c, int mithiv, GameController controller,OutFrame f) {
 		this.controller = controller;
@@ -93,10 +96,10 @@ public class Button extends JButton{
 		frame=f;
 	}
 	/**
-	 * konstruktor, amikor egy Gear reprezentál a gomb
-	 * @param g amit reprezentál
+	 * konstruktor, amikor egy Gear reprezentï¿½l a gomb
+	 * @param g amit reprezentï¿½l
 	 * @param mithiv hogy mit kell hivnia mikor megtamadjak
-	  * @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	  * @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public Button(Gear g, int mithiv, GameController controller,OutFrame f) {
 		this.controller = controller;
@@ -106,10 +109,10 @@ public class Button extends JButton{
 		frame=f;
 	}
 	/**
-	 * konstruktor, amikor egy Field reprezentál a gomb
-	 * @param f amit reprezentál
+	 * konstruktor, amikor egy Field reprezentï¿½l a gomb
+	 * @param f amit reprezentï¿½l
 	 * @param mithiv hogy mit kell hivnia mikor megtamadjak
-	* @param controller a GameController osztály hogy tudja a gomb, minek kell jelezni ha megnyomtak
+	* @param controller a GameController osztï¿½ly hogy tudja a gomb, minek kell jelezni ha megnyomtak
 	 */
 	public Button(Field f, int mithiv, GameController controller,OutFrame ff) {
 		this.controller = controller;
@@ -119,7 +122,7 @@ public class Button extends JButton{
 		this.addActionListener(new Push());
 	}
 	/**
-	 * Az implementál osztály, ami a lenyomast kezeli
+	 * Az implementï¿½l osztï¿½ly, ami a lenyomast kezeli
 	 *
 	 */
 	public class Push implements ActionListener{

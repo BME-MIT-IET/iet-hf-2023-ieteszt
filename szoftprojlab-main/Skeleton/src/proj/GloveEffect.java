@@ -50,7 +50,9 @@ public class GloveEffect extends Effect
 	 *  Csak fel�l van defini�lva, egy �res f�ggv�nnyel, mivel a GloveEffect nem sz�nik meg a k�r�k hat�s�ra.
 	 *  @param v Megkapja, hogy melyik virol�gus h�vta meg rajta
 	 */
-	public void Decrease(Virologist v){	}
+	public void Decrease(Virologist v){	
+		// A Decrease metódus szándékosan üres.
+	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */

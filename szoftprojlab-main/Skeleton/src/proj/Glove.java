@@ -36,7 +36,6 @@ public class Glove extends Gear
 	 * */
 	public void TakeGear(Virologist v)
 	{
-		//System.out.println("\tTakeGear(v) Addot gear-t a virologus felveszi");
 		v.getinventory().AddGear(this);
 		v.AddEffect(ge);
 	}
@@ -48,7 +47,6 @@ public class Glove extends Gear
 	 * */
 	public void TakeGearOff(Virologist v)
 	{
-		//System.out.println("\tTakeGearOff(v) Addot gear-t a virologus megsemm�siti");
 		v.RemoveEffect(ge);
 		v.getinventory().RemoveGear(this);
 	}

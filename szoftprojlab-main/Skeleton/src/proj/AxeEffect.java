@@ -22,7 +22,9 @@ public class AxeEffect extends Effect {
 	 * @param v Megkapja, hogy melyik virol�gus h�vja meg rajta
 	 */
 	@Override
-	public void Decrease(Virologist v){}
+	public void Decrease(Virologist v){
+		// A Decrease metódus szándékosan üres.
+	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */

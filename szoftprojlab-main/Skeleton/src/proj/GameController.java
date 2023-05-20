@@ -3,7 +3,9 @@ import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Fõosztály, irányítja a játék mûködését, a benne zajló mûveleteket(lopás, mozgás, felvétel, támadás, felszerelések eldobása)
@@ -121,7 +123,7 @@ public class GameController{
 		mezok.get(3).Accept(virologusok.get(0));
 		mezok.get(6).Accept(virologusok.get(1));
 		mezok.get(9).Accept(virologusok.get(2));
-		for(int i=0;i<mezok.size();i++) mezok.get(i).setid(Integer.toString(i));
+		for(int i=0;i<mezok.size();i++) mezok.get(i).setNid(Integer.toString(i));
 		Game.ga=this;
 	}
 	/**
@@ -132,7 +134,7 @@ public class GameController{
 		temp = v;
 		Inventory i = temp.getinventory();
 		List<Gear> geras = i.GetGears();
-		OutFrame o = new OutFrame(geras, 1, 0, this);
+		new OutFrame(geras, 1, 0, this);
 	}
 	/**
 	 * Miután választottunk virológust, utána kiválasztjuk, hogy mit szeretnénk lopni tõle
@@ -154,7 +156,7 @@ public class GameController{
 		temp = v;
 		Inventory i = main.getinventory();
 		List<Agens> agens = i.GetAgens();
-		OutFrame o = new OutFrame(agens, 3, 0, this);
+		new OutFrame(agens, 3, 0, this);
 		RajzolMinden();
 		
 	}
@@ -202,22 +204,22 @@ public class GameController{
 		if(milyen == 0) {//Steal
 			Field f = main.getField();
 			List<Virologist> vir = f.getVirologist();
-			OutFrame o = new OutFrame(vir, 2, this);
+			new OutFrame(vir, 2, this);
 		}
 		if(milyen == 1) {//Attack
 			Field f = main.getField();
 			List<Virologist> vir = f.getVirologist();
-			OutFrame o = new OutFrame(vir, 2, this);
+			new OutFrame(vir, 2, this);
 		}
 		if(milyen == 2) {//Drop Item
 			Inventory i = main.getinventory();
 			List<Gear> gears = i.GetGears();
-			OutFrame o = new OutFrame(gears,4, 0, this);
+			new OutFrame(gears,4, 0, this);
 		}
 		if(milyen == 3) {//Move
 			Field f = main.getField();
 			List<Field> fields = f.getNeighbors();
-			OutFrame o = new OutFrame(fields, 5, 0, this);
+			new OutFrame(fields, 5, 0, this);
 		}
 		if(milyen == 4) {//PickUp
 			main.PickUp();
@@ -225,7 +227,7 @@ public class GameController{
 		}
 		if(milyen==6) {//Craft
 			List<Code> codes= main.getcode();
-			OutFrame o = new OutFrame(codes, 6, 'a', this);
+			new OutFrame(codes, 6, 'a', this);
 		}
 		
 	}
@@ -244,74 +246,101 @@ public class GameController{
 	 * Kirajzolja az egész pályát
 	 */
 	public void RajzolMinden() {
-		Graphics2D g2d = (Graphics2D)g;
-		Image image;
-		image = Toolkit.getDefaultToolkit().getImage("./Pictures/City.jpg");
-		g2d.drawImage(image, 0, 0,1000,550, jatekframe);
-		for(Field f: mezok) {
-			f.drawNeigbourLine(g, jatekframe);			
-		}
-		for(Field f: mezok) {
+		Graphics2D g2d = (Graphics2D) g;
+		Image image = Toolkit.getDefaultToolkit().getImage("./Pictures/City.jpg");
+		g2d.drawImage(image, 0, 0, 1000, 550, jatekframe);
+	
+		for (Field f : mezok) {
+			f.drawNeigbourLine(g, jatekframe);
 			f.drawField(g, jatekframe);
 			f.drawIconOnField(g, jatekframe);
+			if (jatekframe != null)
+				jatekframe.drawVirologinst(f, main, g);
 		}
-		for(Field f: mezok) {
-			if(jatekframe!=null)
-				jatekframe.drawVirologinst(f, main,g);
-		}
-		Inventory i=main.getinventory();
+	
+		Inventory i = main.getinventory();
 		List<Gear> gears = i.GetGears();
-		int glove =0;
-		int backPack=0;
-		int cape = 0;
-		int axe=0;
-		for(Gear g1: gears) {
-			if(g1.getClass()==new Glove().getClass())
-				glove++;
-			if(g1.getClass()==new BackPack().getClass())
-				backPack++;
-			if(g1.getClass()==new Cape().getClass())
-				cape++;
-			if(g1.getClass()==new Axe().getClass())
-				axe++;
+		Map<Class<? extends Gear>, Integer> gearCountMap = new HashMap<>();
+		gearCountMap.put(Glove.class, 0);
+		gearCountMap.put(BackPack.class, 0);
+		gearCountMap.put(Cape.class, 0);
+		gearCountMap.put(Axe.class, 0);
+	
+		for (Gear g1 : gears) {
+			Class<? extends Gear> gearClass = g1.getClass();
+			gearCountMap.put(gearClass, gearCountMap.getOrDefault(gearClass, 0) + 1);
 		}
-		jatekframe.drawInventory(glove, 1,g);//glove
-		jatekframe.drawInventory(backPack, 2,g);//BackPack
-		jatekframe.drawInventory(cape, 3,g);//Cape
-		jatekframe.drawInventory(axe, 4,g);//Axe
+	
+		for (int gearType = 1; gearType <= 4; gearType++) {
+			int count = gearCountMap.getOrDefault(getGearClass(gearType), 0);
+			jatekframe.drawInventory(count, gearType, g);
+		}
+	
 		List<Agens> agens = i.GetAgens();
-		int memoryLossV=0;
-		int vitusDanceV=0;
-		int stunV=0;
-		int vaccine=0;
-		for(Agens a: agens) {
-			if(a.getClass()==new MemoryLossV().getClass())
-				memoryLossV++;
-			if(a.getClass()==new VitusDanceV().getClass())
-				vitusDanceV++;
-			if(a.getClass()==new StunV().getClass())
-				stunV++;
-			if(a.getClass()==new Vaccine().getClass())
-				vaccine++;
+		Map<Class<? extends Agens>, Integer> agensCountMap = new HashMap<>();
+		agensCountMap.put(MemoryLossV.class, 0);
+		agensCountMap.put(VitusDanceV.class, 0);
+		agensCountMap.put(StunV.class, 0);
+		agensCountMap.put(Vaccine.class, 0);
+	
+		for (Agens a : agens) {
+			Class<? extends Agens> agensClass = a.getClass();
+			agensCountMap.put(agensClass, agensCountMap.getOrDefault(agensClass, 0) + 1);
 		}
-		jatekframe.drawInventory(memoryLossV, 5,g);//MemoryLossV
-		jatekframe.drawInventory(vitusDanceV, 6,g);//VitusDanceV
-		jatekframe.drawInventory(stunV, 7,g);//StunV
-		jatekframe.drawInventory(vaccine, 8,g);//Vaccine
+	
+		for (int agensType = 5; agensType <= 8; agensType++) {
+			int count = agensCountMap.getOrDefault(getAgensClass(agensType), 0);
+			jatekframe.drawInventory(count, agensType, g);
+		}
+	
 		List<Material> mat = i.getMaterial();
-		MaterialVisitor visit= new MaterialVisitor();
-		int aminoAcid=0;
-		int nucleotid=0;
-		for(Material m: mat) {
-			if(m.Accept(visit)==1)
+		MaterialVisitor visit = new MaterialVisitor();
+		int aminoAcid = 0;
+		int nucleotid = 0;
+	
+		for (Material m : mat) {
+			int materialType = m.Accept(visit);
+			if (materialType == 1)
 				aminoAcid++;
-			if(m.Accept(visit)==2)
+			if (materialType == 2)
 				nucleotid++;
 		}
-		jatekframe.drawInventory(aminoAcid, 9,g);//AminoAcid
-		jatekframe.drawInventory(nucleotid, 10,g);//Nucleotid
-	    ArrayList <Effect> effects = main.getEffect();
-		jatekframe.drawEffects(effects,g);
+	
+		jatekframe.drawInventory(aminoAcid, 9, g);//AminoAcid
+		jatekframe.drawInventory(nucleotid, 10, g);//Nucleotid
+	
+		ArrayList<Effect> effects = main.getEffect();
+		jatekframe.drawEffects(effects, g);
+	}
+	
+	private Class<? extends Gear> getGearClass(int gearType) {
+		switch (gearType) {
+			case 1:
+				return Glove.class;
+			case 2:
+				return BackPack.class;
+			case 3:
+				return Cape.class;
+			case 4:
+				return Axe.class;
+			default:
+				throw new IllegalArgumentException("Invalid gear type: " + gearType);
+		}
+	}
+	
+	private Class<? extends Agens> getAgensClass(int agensType) {
+		switch (agensType) {
+			case 5:
+				return MemoryLossV.class;
+			case 6:
+				return VitusDanceV.class;
+			case 7:
+				return StunV.class;
+			case 8:
+				return Vaccine.class;
+			default:
+				throw new IllegalArgumentException("Invalid agens type: " + agensType);
+		}
 	}
 	/**
 	 * Kirajzoltattja a befejezõ képernyõt mikor valaki megnyeri a jatékot

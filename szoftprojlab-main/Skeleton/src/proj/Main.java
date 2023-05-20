@@ -468,7 +468,7 @@ public class Main {
 				  }
 
 				  if(fields.size() > 0) {
-					  fields.get(fields.size()-1).setid(command[1]);  
+					  fields.get(fields.size()-1).setNid(command[1]);  
 					  dictionary.put(fields.get(fields.size()-1).getid(), fields.get(fields.size()-1));
 				  }			  
 				  //fields.get(fields.size()-1).setid(command[1]);
