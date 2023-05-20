@@ -7,8 +7,8 @@ public class SelfAttackWithVacina {
 
 	@Test
 	public void test() {
-		String in = new String();
-        String out = new String();
+		String in = "";
+		String out = "";
         in = Main.inputreader("SelfAttackWithVacina.txt");
         out = Main.outputreader("SelfAttackWithVacina.txt");
 

@@ -7,8 +7,8 @@ public class PickUpCape {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("PickUpCape.txt");
 		out = Main.outputreader("PickUpCape.txt");
 		

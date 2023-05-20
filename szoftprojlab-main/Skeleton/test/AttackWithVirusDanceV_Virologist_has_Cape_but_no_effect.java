@@ -7,8 +7,8 @@ public class AttackWithVirusDanceV_Virologist_has_Cape_but_no_effect {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("AttackWithVirusDanceV_Virologist_has_Cape_but_no_effect.txt");
 		out = Main.outputreader("AttackWithVirusDanceV_Virologist_has_Cape_but_no_effect.txt");
 		

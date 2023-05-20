@@ -7,8 +7,8 @@ public class AttackWithVirusDanceV_Virologist_has_Vacina {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("AttackWithVirusDanceV_Virologist_has_Vacina.txt");
 		out = Main.outputreader("AttackWithVirusDanceV_Virologist_has_Vacina.txt");
 		

@@ -6,8 +6,8 @@ public class Touch {
 
 	@Test
 	public void test() {
-		String in = new String();
-        String out = new String();
+		String in = "";
+		String out = "";
         in = Main.inputreader("Touch.txt");
         out = Main.outputreader("Touch.txt");
 
