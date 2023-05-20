@@ -467,3 +467,8 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 	
 	
 	ok.addActionListener(e -> System.exit(0));
+
+
+# Javítások eredménye:
+
+![alt text](2.png)
