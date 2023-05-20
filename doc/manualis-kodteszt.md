@@ -1,25 +1,30 @@
-## Manuális kódtesztelés
+# Manuális kódtesztelés
 Code smellek: 
 
-# AxeEffect.java, BackPackEffect.java: Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.
+## AxeEffect.java, BackPackEffect.java: 
+Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.
 javitas:
 
-Button.java: Make "obj" transient or serializable.
+## Button.java: 
+Make "obj" transient or serializable.
 javitas:
 
-Code.java: Replace this use of System.out or System.err by a logger.
+## Code.java: 
+Replace this use of System.out or System.err by a logger.
 javítás: private static final Logger logger = Logger.getLogger(Code.class.getName());
          logger.info("\tgetAgens() Agens gettere lefutt");
        
- Field.java: Random rand = new Random(); : Save and re-use this "Random".
+## Field.java: 
+Random rand = new Random(); : Save and re-use this "Random".
  public void setid(String nid): Rename method "setid" to prevent any misunderstanding/clash with method "setId".
  
- Game.java: Add a private constructor to hide the implicit public one.
+## Game.java: 
+Add a private constructor to hide the implicit public one.
  javítás: private Game() {
         // Privát konstruktor
     }
 
-GameController.java: 
+## GameController.java: 
 
 Rename "x" which hides the field declared at line 14.
 javítás int x=1040 => x=1040
@@ -199,7 +204,7 @@ private Class<? extends Agens> getAgensClass(int agensType) {
     }
 }
 
-GameFrame.java
+## GameFrame.java
   java: Refactor this method to reduce its Cognitive Complexity from 43 to the 15 allowed. 
 
 	public void drawInventory(int hanydb, int milyen, Graphics g) {
@@ -385,5 +390,6 @@ GameFrame.java
     }
 }
 
-Main.java: Remove this object instantiation and use "Laboratory.class" instead.
+## Main.java: 
+Remove this object instantiation and use "Laboratory.class" instead.
 fields.get(i).getClass() == new Laboratory.getClass() => fields.get(i) instanceof Laboratory
