@@ -4,21 +4,21 @@ Code smellek:
 ![alt text](1.png)
 
 ## AxeEffect.java, BackPackEffect.java: 
-Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.
+*Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.*
 
-javítás: Metóduson belüli komment.
+**javítás:** Metóduson belüli komment.
 
 ## Button.java: 
-Make "obj" transient or serializable.
+*Make "obj" transient or serializable.*
 
-javítás:
+**javítás:**
 
 	 private transient Object obj;
 
 ## Code.java: 
-Replace this use of System.out or System.err by a logger.
+*Replace this use of System.out or System.err by a logger.*
 
-javítás: 
+**javítás:**
 
 	private static final Logger logger = Logger.getLogger(Code.class.getName());
 	logger.info("\tgetAgens() Agens gettere lefut");
@@ -29,9 +29,9 @@ javítás:
  `public void setid(String nid)`: Rename method "setid" to prevent any misunderstanding/clash with method "setId".
  
 ## Game.java: 
-Add a private constructor to hide the implicit public one.
+*Add a private constructor to hide the implicit public one.*
 
-javítás: 
+**javítás:**
  
  	private Game() {
         // Privát konstruktor
@@ -39,15 +39,15 @@ javítás:
 
 ## GameController.java: 
 
-Rename "x" which hides the field declared at line 14.
+*Rename "x" which hides the field declared at line 14.*
 
-javítás: `int x=1040` => `x=1040`
+**javítás:** `int x=1040` => `x=1040`
 
-Remove this useless assignment to local variable "o".
+*Remove this useless assignment to local variable "o".*
 
-javítás: `OutFrame o = new OutFrame(agens, 3, 0, this);` => `new OutFrame(agens, 3, 0, this);`
+**javítás:** `OutFrame o = new OutFrame(agens, 3, 0, this);` => `new OutFrame(agens, 3, 0, this);`
 
-Refactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed. [+17 locations]
+*Refactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed. [+17 locations]*
 
 
 	public void RajzolMinden() {
@@ -122,7 +122,7 @@ Refactor this method to reduce its Cognitive Complexity from 28 to the 15 allowe
 	}
   
   
-  javítás:
+**javítás:**
 
   	public void RajzolMinden() {
   		Graphics2D g2d = (Graphics2D) g;
@@ -223,7 +223,7 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 }
 
 ## GameFrame.java
-  java: Refactor this method to reduce its Cognitive Complexity from 43 to the 15 allowed. 
+  *java: Refactor this method to reduce its Cognitive Complexity from 43 to the 15 allowed.*
 
 	public void drawInventory(int hanydb, int milyen, Graphics g) {
 		x = 1040;
@@ -305,7 +305,7 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 		g2d.drawString(String.valueOf(hanydb), (x), (y + 10));
 	}
   
-  javítás:
+**javítás:**
 
 	private static final Map<Integer, String> IMAGE_MAP = Map.of(
 			1, "./Pictures/Glove",
@@ -344,7 +344,7 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 		g2d.drawString(String.valueOf(hanydb), x, y + 10);
 	}
   
-  Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed. [+9 locations]
+  *Refactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed. [+9 locations]*
   
   	public void drawEffects(ArrayList<Effect> effects, Graphics g) {
 		y = 570;
@@ -382,7 +382,7 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 
 	}
 
-  javítás:
+**javítás:**
   
  	 public void drawEffects(ArrayList<Effect> effects, Graphics g) {
 		y = 570;
@@ -409,17 +409,17 @@ private Class<? extends Agens> getAgensClass(int agensType) {
 }
 
 ## Main.java: 
-Remove this object instantiation and use "Laboratory.class" instead.
+*Remove this object instantiation and use "Laboratory.class" instead.*
 
 `fields.get(i).getClass() == new Laboratory.getClass()` => `fields.get(i) instanceof Laboratory`
 
-Remove this object instantiation and use "StunV.class" instead.
+*Remove this object instantiation and use "StunV.class" instead.*
 
 	if (virologists.get(i).getinventory().GetAgens().get(j).getClass().equals(new StunV().getClass())) {
 		statsall += ("StunV]");
 		}
 
-javítás: 
+**javítás:**
 
 	if (virologists.get(i).getinventory().GetAgens().get(j) instanceof StunV) {
 		statsall += ("StunV]");
@@ -428,9 +428,9 @@ javítás:
 ## Refuge.java
 	gear.getClass()==new BackPack().getClass()
 
-Remove this object instantiation and use "Glove.class" instead.
+*Remove this object instantiation and use "Glove.class" instead.*
 
-javítás: 
+**javítás:**
 
 	gear instanceof BackPack
 
@@ -443,10 +443,10 @@ javítás:
 		}	
 	});
 
-Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.)
+*Make this anonymous inner class a lambda (sonar.java.source not set. Assuming 8 or greater.)*
 
 
-javítás: 
+**javítás:**
 	
 	
 	ok.addActionListener(e -> System.exit(0));
