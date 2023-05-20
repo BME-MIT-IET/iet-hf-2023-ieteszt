@@ -222,6 +222,23 @@ private Class<? extends Agens> getAgensClass(int agensType) {
     }
 }
 
+*Unused assignments should be removed*
+	WinFrame wf= new WinFrame();
+
+**javítás:**
+
+	new WinFrame();
+
+*Remove this useless assignment to local variable "o".*
+	
+	OutFrame o = new OutFrame(geras, 1, 0, this);
+
+
+**javítás:**
+
+	new OutFrame(geras, 1, 0, this); 
+
+
 ## GameFrame.java
   *java: Refactor this method to reduce its Cognitive Complexity from 43 to the 15 allowed.*
 
