@@ -65,7 +65,7 @@ public class Storage extends Field
 	 */
 	@Override
 	public void drawIconOnField(Graphics g, GameFrame frame) {
-		if(mat.size()>=0) {
+		if(mat.isEmpty()) {
 			int nucleotid=0;
 			int aminoacid=0;
 			MaterialVisitor visitor = new MaterialVisitor();

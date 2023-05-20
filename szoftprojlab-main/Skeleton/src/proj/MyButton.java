@@ -2,22 +2,22 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 /**
- * Egy játék képernyõn lévõ gombot reprezentáló osztály
- * Kezeli, hogy milyen gomb és mit történik, ha megnyomják
+ * Egy jï¿½tï¿½k kï¿½pernyï¿½n lï¿½vï¿½ gombot reprezentï¿½lï¿½ osztï¿½ly
+ * Kezeli, hogy milyen gomb ï¿½s mit tï¿½rtï¿½nik, ha megnyomjï¿½k
  */
 public class MyButton extends JButton{
 	/**
-	 * Milyen tipusú a gomb, mit történjen ha megnyomják
+	 * Milyen tipusï¿½ a gomb, mit tï¿½rtï¿½njen ha megnyomjï¿½k
 	 */
 	int milyen;
 	/**
-	 * GameConrtoller, a grafikus vezértlõt jegyzi meg, hogy minek kell szólnia ha megnyomják
+	 * GameConrtoller, a grafikus vezï¿½rtlï¿½t jegyzi meg, hogy minek kell szï¿½lnia ha megnyomjï¿½k
 	 */
-	GameController controll;
+	transient GameController controll;
 	/**
-	 * Inizcializálja a gombot
-	 * @param p megkapja, hogy milyen tipusú a gomb, minek kell rajta lennie
-	 * @param c megkapja GaemController-t akinek szólnia kell ha lenyomták
+	 * Inizcializï¿½lja a gombot
+	 * @param p megkapja, hogy milyen tipusï¿½ a gomb, minek kell rajta lennie
+	 * @param c megkapja GaemController-t akinek szï¿½lnia kell ha lenyomtï¿½k
 	 */
 	public void init(int p,GameController c){
 		milyen=p;
@@ -43,12 +43,12 @@ public class MyButton extends JButton{
 		this.addActionListener(new Push());
 	}
 	/**
-	 * JButton-os belsõ ActionListener kezeli ha lenyomják a gombot
+	 * JButton-os belsï¿½ ActionListener kezeli ha lenyomjï¿½k a gombot
 	 */
 	public class Push implements ActionListener{
 		/**
-		 * Felüldefiniált belsõ függvény, hogy mi történjen ha megnyomják a gombot
-		 * jelen esetünkben szólunk a GameControllernek
+		 * Felï¿½ldefiniï¿½lt belsï¿½ fï¿½ggvï¿½ny, hogy mi tï¿½rtï¿½njen ha megnyomjï¿½k a gombot
+		 * jelen esetï¿½nkben szï¿½lunk a GameControllernek
 		 */
 		@Override
 		public void actionPerformed(ActionEvent e) {

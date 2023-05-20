@@ -32,13 +32,7 @@ public class WinFrame extends JFrame{
 		l.setIcon(winp);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		ok.setBounds(80, 90, 40, 40);
-		ok.addActionListener( new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				System.exit(0);	
-			}
-			
-		});
+		ok.addActionListener(e -> System.exit(0));
 		JPanel panel = new JPanel();
 		panel.add(ok, BorderLayout.CENTER);
 		this.add(panel, BorderLayout.SOUTH);
