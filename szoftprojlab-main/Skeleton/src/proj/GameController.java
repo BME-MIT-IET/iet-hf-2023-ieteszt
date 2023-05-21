@@ -318,7 +318,7 @@ public class GameController{
 	 */
 	public void JatekVege() {
 		jatekframe.setVisible(false);
-		WinFrame wf = new WinFrame();
+		new WinFrame();
 		
 	}
 }
