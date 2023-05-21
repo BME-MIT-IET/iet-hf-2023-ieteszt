@@ -24,7 +24,7 @@ Javítás előtt:
 ## Code.java: 
 *Replace this use of System.out or System.err by a logger.*
 
-**javítás:**
+**javítás:** 
 
 	private static final Logger logger = Logger.getLogger(Code.class.getName());
 	logger.info("\tgetAgens() Agens gettere lefut");
