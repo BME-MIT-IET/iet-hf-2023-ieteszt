@@ -11,7 +11,7 @@
   </properties>
   
   <build>
-    <sourceDirectory>szoftporjlab-main/Skeleton/src/proj</sourceDirectory>
+    <sourceDirectory>szoftporjlab-main/Skeleton/src</sourceDirectory>
     <testSourceDirectory>szoftporjlab-main/Skeleton/test</testSourceDirectory>
     <plugins>
       <plugin>
