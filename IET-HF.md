@@ -3,9 +3,8 @@ A cél, hogy a feladat végére egy összességében jobban működő, stabilabb
 
 ### Technológia fókusz
 - Build keretrendszer beüzemelése (Maven) + CI
-- Egységtesztek készítése/kiegészítése + tesztek kódlefedettségének mérése
 - Manuális kód átvizsgálás + Statikus analízis eszköz futtatása
 
 ### Termék/felhasználó fókusz
-- UI tesztek készítése (Selenium)
+- Nem-funkcionális jellemzők vizsgálata (teljesítmény, stresszteszt, biztonság, használhatóság...)
 - Manuális tesztek megtervezése, végrehajtása
