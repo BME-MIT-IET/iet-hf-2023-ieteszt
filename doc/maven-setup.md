@@ -23,5 +23,5 @@ Mivel a forráskód kommentjében vannak ékezetes karakterek a karakterkódolá
 <project.build.sourceEncoding>Cp1250</project.build.sourceEncoding>
 ```
 
-### A teszteket futtatja a github actions
+### Mindezekután a teszteket futtatja a github actions, miután buildelte a projektet.
 ![](testSuccess.png)
