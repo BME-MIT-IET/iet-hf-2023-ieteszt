@@ -46,7 +46,6 @@ public abstract class Agens
 	 * */
 	public void Decrase(Inventory i)
 	{
-		//System.out.println("\t Decrase(i) Az �gens bomlik.");
 		duration=duration-1;
 		if(duration<=0)
 			i.RemoveAgens(this);

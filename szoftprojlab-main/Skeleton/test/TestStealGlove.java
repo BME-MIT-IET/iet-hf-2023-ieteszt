@@ -5,8 +5,8 @@ public class TestStealGlove {
 
 	@Test
 	public void test() {
-		String in = new String();
-        String out = new String();
+        String in = "";
+		String out = "";
         in = Main.inputreader("StealGlove.txt");
         out = Main.outputreader("StealGlove.txt");
 

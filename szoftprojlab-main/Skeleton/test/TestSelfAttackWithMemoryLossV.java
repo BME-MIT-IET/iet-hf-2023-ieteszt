@@ -7,8 +7,8 @@ public class TestSelfAttackWithMemoryLossV {
 
 	@Test
 	public void test() {
-		String in = new String();
-        String out = new String();
+		String in = "";
+		String out = "";
         in = Main.inputreader("SelfAttackWithMemoryLossV.txt");
         out = Main.outputreader("SelfAttackWithMemoryLossV.txt");
 

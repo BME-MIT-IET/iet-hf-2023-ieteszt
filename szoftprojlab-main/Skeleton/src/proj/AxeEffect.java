@@ -13,9 +13,7 @@ public class AxeEffect extends Effect {
 	@Override
 	public int Accept(IVisitor v)
 	{
-		//System.out.println("\tAccept(i)IVisitor pattern haszn�lata");
 		int x=v.Visit(this);
-		//System.out.println("\tAccept(i) "+x+" return");
 		return x;
 	}
 	/**
@@ -24,11 +22,13 @@ public class AxeEffect extends Effect {
 	 * @param v Megkapja, hogy melyik virol�gus h�vja meg rajta
 	 */
 	@Override
-	public void Decrease(Virologist v){}
+	public void Decrease(Virologist v){
+		// A Decrease metódus szándékosan üres.
+	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */
 	public AxeEffect() {
-		id="axeEffect";//+(int)(Math.random()*1000);
+		id="axeEffect";
 	}
 }

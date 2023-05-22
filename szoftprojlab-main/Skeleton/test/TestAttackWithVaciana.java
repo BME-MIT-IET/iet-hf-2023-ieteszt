@@ -7,8 +7,8 @@ public class TestAttackWithVaciana {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("AttackWithVaciana.txt");
 		out = Main.outputreader("AttackWithVaciana.txt");
 		

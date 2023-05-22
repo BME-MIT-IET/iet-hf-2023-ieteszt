@@ -22,6 +22,6 @@ public class ParalyzedEffect extends Effect
 	 * Az oszt�ly konstruktora
 	 */
 	public ParalyzedEffect() {
-		id="paralyzedEffect";//+(int)(Math.random()*1000);
+		id="paralyzedEffect";
 	}
 }

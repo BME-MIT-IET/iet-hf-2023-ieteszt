@@ -7,8 +7,8 @@ public class TestAttackWithStunV_Virologist_has_Glove {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("AttackWithStunV_Virologist_has_Glove.txt");
 		out = Main.outputreader("AttackWithStunV_Virologist_has_Glove.txt");
 		

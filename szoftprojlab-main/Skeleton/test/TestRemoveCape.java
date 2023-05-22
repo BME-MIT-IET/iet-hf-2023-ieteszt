@@ -8,8 +8,8 @@ public class TestRemoveCape {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("RemoveCape.txt");
 		out = Main.outputreader("RemoveCape.txt");
 		

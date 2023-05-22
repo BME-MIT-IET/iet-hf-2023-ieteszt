@@ -18,7 +18,7 @@ public class Glove extends Gear
 	public Glove()
 	{
 		ge= new GloveEffect(this);
-		id="glove";//+(int)(Math.random()*1000);
+		id="glove";
 	}
 	/**
 	 * ge gettere
@@ -27,8 +27,6 @@ public class Glove extends Gear
 	 */
 	public GloveEffect getGe()
 	{
-		//System.out.println("\tgetGe() ge gettere lefutt");
-		//System.out.println("\tgetGe() GloveEffect return");
 		return ge;
 	}
 	/** 
@@ -38,7 +36,6 @@ public class Glove extends Gear
 	 * */
 	public void TakeGear(Virologist v)
 	{
-		//System.out.println("\tTakeGear(v) Addot gear-t a virologus felveszi");
 		v.getinventory().AddGear(this);
 		v.AddEffect(ge);
 	}
@@ -50,7 +47,6 @@ public class Glove extends Gear
 	 * */
 	public void TakeGearOff(Virologist v)
 	{
-		//System.out.println("\tTakeGearOff(v) Addot gear-t a virologus megsemm�siti");
 		v.RemoveEffect(ge);
 		v.getinventory().RemoveGear(this);
 	}
@@ -62,8 +58,6 @@ public class Glove extends Gear
 	 *  */
 	public void Steal(Virologist whoV, Virologist fromV)
 	{
-		//System.out.println("\tSteal(whoV, fromV) Addot gear-t a virologust�l elopta egy m�sik virologus");
-		//fromV.TakeGearOff(this);
 		this.TakeGearOff(fromV);
 		fromV.RemoveEffect(ge);
 		whoV.AddGearFromSteal(this);

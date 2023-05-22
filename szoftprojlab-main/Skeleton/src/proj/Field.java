@@ -14,7 +14,7 @@ import java.awt.Font;
  * */
 public class Field implements FieldView
 {
-
+	Random rand = new Random();
 	/**
 	 * Egy id amivel tudjuk az adott mez�t a ki�r�sn�l azonos�tani a felhaszn�l� fogja hasszn�lni
 	 */
@@ -73,7 +73,6 @@ public class Field implements FieldView
 	 */
 	public void Accept(Virologist v)
 	{
-		//System.out.println("\tAccept(v) Virol�gus hozz�ad�dik egy mez�h�z");
 		virologist.add(v);
 		v.setFields(this);
 	}
@@ -83,7 +82,7 @@ public class Field implements FieldView
 		return id;
 	}
 	
-	public void setid(String nid)
+	public void setNid(String nid)
 	{
 		 id=nid;
 	}
@@ -93,7 +92,6 @@ public class Field implements FieldView
 	 */
 	public void Remove(Virologist v)
 	{
-		//System.out.println("\tRemove(v) Az adott mez� elhagyja a Virologus");
 		virologist.remove(v);
 	}
 	
@@ -103,6 +101,7 @@ public class Field implements FieldView
 	 */
 	public void Use(Virologist v)
 	{
+		// A Use metódus szándékosan üres.
 	}
 	
 	/** 
@@ -111,9 +110,7 @@ public class Field implements FieldView
 	 */
 	public Field GetRandomNeighbor()
 	{
-		//System.out.println("\tGetRandomNeighbor() Egy random szomsz�dos mez�t kapunk meg a mez�t�l");
-        Random rand = new Random();
-        //System.out.println("\tGetRandomNeighbor() Field return");
+        
         return neighbors.get(rand.nextInt(neighbors.size()));
 	}
 	/**

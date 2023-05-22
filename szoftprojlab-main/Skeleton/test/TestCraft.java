@@ -7,8 +7,8 @@ public class TestCraft {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("Craft.txt");
 		out = Main.outputreader("Craft.txt");
 		

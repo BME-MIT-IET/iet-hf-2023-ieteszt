@@ -6,8 +6,8 @@ public class TestSelfAttackWithStunV {
 
 	@Test
 	public void test() {
-		String in = new String();
-        String out = new String();
+		String in = "";
+		String out = "";
         in = Main.inputreader("SelfAttackWithStunV.txt");
         out = Main.outputreader("SelfAttackWithStunV.txt");
 

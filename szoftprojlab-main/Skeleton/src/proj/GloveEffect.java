@@ -29,9 +29,7 @@ public class GloveEffect extends Effect
 	@Override
 	public int Accept(IVisitor v)
 	{
-		//System.out.println("\tAccept(i)IVisitorM pattern haszn�lata");
 		int x=v.Visit(this);
-		//System.out.println("\tAccept(i) "+x+" return");
 		return x;
 	}
 	/**
@@ -44,7 +42,7 @@ public class GloveEffect extends Effect
 	{
 		duration--;
 		if(duration==0) {
-			v.RemoveEffect(this); //TODO check j�-e
+			v.RemoveEffect(this);
 			glove=null;
 		}
 	}
@@ -52,11 +50,14 @@ public class GloveEffect extends Effect
 	 *  Csak fel�l van defini�lva, egy �res f�ggv�nnyel, mivel a GloveEffect nem sz�nik meg a k�r�k hat�s�ra.
 	 *  @param v Megkapja, hogy melyik virol�gus h�vta meg rajta
 	 */
-	public void Decrease(Virologist v){	}
+	@Override
+	public void Decrease(Virologist v){	
+		// A Decrease metódus szándékosan üres.
+	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */
 	public GloveEffect() {
-		id="gloveEffect";//+(int)(Math.random()*1000);
+		id="gloveEffect";
 	}
 }

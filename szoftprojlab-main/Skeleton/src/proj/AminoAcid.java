@@ -27,9 +27,7 @@ public class AminoAcid implements Material
 	@Override
 	public int Accept(IVisitorM i)
 	{
-		//System.out.println("\tAccept(i)IVisitorM pattern haszn�lata");
 		int x=i.Visit(this);
-		//System.out.println("\tAccept(i) "+x+" return");
 		return x;
 	}
 	/**

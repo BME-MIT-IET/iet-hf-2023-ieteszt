@@ -3,10 +3,13 @@
 */
 public class Game
 {
+	private Game() {
+        // PrivÃ¡t konstruktor
+    }
 	/**
-	 * Megkapja a gameControlert, hogy tudjunk neki szólni, hogy rajzolja ki
+	 * Megkapja a gameControlert, hogy tudjunk neki szï¿½lni, hogy rajzolja ki
 	 */
-	static GameController ga;
+	public static GameController ga;
 	/** 
 	 *  Ellenï¿½rzi, hogy megvan-e az adott virolgusnak a megfelel szm 
 	 *  genetikai kdja, az adott virolgusnl lv genetikai kdok szmt 

@@ -24,7 +24,6 @@ public class VitusDanceV extends Agens
 	 */
 	public void Use(Virologist v)
 	{
-		//System.out.println("\tUse(v) StunV haszn�lata");
 		v.AddEffect(vde);
 	}
 }

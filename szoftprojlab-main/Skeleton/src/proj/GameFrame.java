@@ -1,27 +1,17 @@
 import java.awt.Component;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.geom.Line2D;
 import java.awt.Image;
 import java.awt.Toolkit;
-import javax.swing.*;
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.sound.sampled.Line;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 public class GameFrame extends JFrame {
-	
-	private int x;
-	private int y;
+
 	ArrayList<MyButton> gombok = new ArrayList<MyButton>();
 	GameController controller;
-
 	
 	/**
 	 * Letrehoz egy gamecontrollert
@@ -29,8 +19,6 @@ public class GameFrame extends JFrame {
 	public GameFrame(GameController contr) {
 		SwingUtilities.updateComponentTreeUI(this);
 		controller = contr;
-		x=0;
-		y=0;
 		this.add(new PaintComp());
 		this.setSize(1290,720);
         this.setLocationRelativeTo(null);  
@@ -127,9 +115,9 @@ public class GameFrame extends JFrame {
 			x=1140;
 		}
 		if(milyen%2!=0) {
-			y=(int) (y+(Math.floor(milyen/2)*100));
+			y=(int) (y+(milyen/2)*100);
 		}else {
-			y=(int) (y+(Math.floor((milyen-1)/2)*100));
+			y=(int) (y+((milyen-1)/2)*100);
 		}
 		
 		Graphics2D g2d = (Graphics2D)g;

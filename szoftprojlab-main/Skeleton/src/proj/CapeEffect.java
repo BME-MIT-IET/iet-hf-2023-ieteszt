@@ -23,11 +23,14 @@ public class CapeEffect extends Effect
 	 *  Csak fel�l van defini�lva, egy �res f�ggv�nnyel, 
 	 *  mivel a CapeEffect nem sz�nik meg a k�r�k hat�s�ra. 
 	 */
-	public void Decrease(Virologist v){}
+	@Override
+	public void Decrease(Virologist v){
+		// A Decrease metódus szándékosan üres.
+	}
 	/**
 	 * Az oszt�ly konstruktora
 	 */
 	public CapeEffect() {
-		id="capeEffect";//+(int)(Math.random()*1000);
+		id="capeEffect";
 	}
 }

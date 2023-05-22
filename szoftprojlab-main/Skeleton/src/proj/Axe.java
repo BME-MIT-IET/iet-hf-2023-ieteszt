@@ -20,7 +20,6 @@ public class Axe extends Gear {
 	 */
 	@Override
 	public void TakeGear(Virologist v) {
-		//System.out.println("\tTakeGear(v) Addot gear-t a virologus felveszi");
 		v.getinventory().AddGear(this);
 		if(pbe!=null) v.AddEffect(pbe);
 	}
@@ -41,8 +40,6 @@ public class Axe extends Gear {
 	@Override
 	public void Steal(Virologist whoV, Virologist fromV)
 	{
-		//System.out.println("\tSteal(whoV, fromV) Addot gear-t a virologust�l elopta egy m�sik virologus");
-		//fromV.TakeGearOff(this);
 		this.TakeGearOff(fromV);
 		EffectVisitor visit= new EffectVisitor();
 		fromV.RemoveEffect(pbe);

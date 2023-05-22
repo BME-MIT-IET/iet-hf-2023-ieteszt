@@ -22,7 +22,6 @@ public class MemoryLossV extends Agens
 	 */
 	public void Use(Virologist v)
 	{
-		//System.out.println("\tUse(v) MemoryLossV haszn�lata");
 		v.RemoveCode();
 	}
 }

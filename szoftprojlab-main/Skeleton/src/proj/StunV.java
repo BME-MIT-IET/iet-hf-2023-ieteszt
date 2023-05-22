@@ -26,7 +26,6 @@ public class StunV extends Agens
 	 */
 	public void Use(Virologist v)
 	{
-		//System.out.println("\tUse(v) StunV haszn�lata");
 		v.AddEffect(pe);
 	}
 }

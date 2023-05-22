@@ -7,8 +7,8 @@ public class TestRemoveBackPack {
 
 	@Test
 	public void test() {
-		String in = new String();
-		String out = new String();
+		String in = "";
+		String out = "";
 		in = Main.inputreader("RemoveBackPack.txt");
 		out = Main.outputreader("RemoveBackPack.txt");
 		

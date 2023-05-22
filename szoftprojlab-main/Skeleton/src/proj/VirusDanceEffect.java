@@ -20,12 +20,11 @@ public class VirusDanceEffect extends Effect
 	 * Az osztï¿½ly konstruktora
 	 */
 	public VirusDanceEffect() {
-		id="virusDanceEffect";//+(int)(Math.random()*1000);
-		duration=1;
+		id="virusDanceEffect";
 	}
 	/** 
 	 *  Az effect lebomlï¿½sï¿½t kezeli
-	 *  és random szomszédos mezõre mozgatja a virológust
+	 *  ï¿½s random szomszï¿½dos mezï¿½re mozgatja a virolï¿½gust
 	 *  @param v Megkapja, hogy melyik virolï¿½gushoz tartozik az effect
 	 */
 	@Override

@@ -121,7 +121,7 @@ public class GameController{
 		mezok.get(3).Accept(virologusok.get(0));
 		mezok.get(6).Accept(virologusok.get(1));
 		mezok.get(9).Accept(virologusok.get(2));
-		for(int i=0;i<mezok.size();i++) mezok.get(i).setid(Integer.toString(i));
+		for(int i=0;i<mezok.size();i++) mezok.get(i).setNid(Integer.toString(i));
 		Game.ga=this;
 	}
 	/**
@@ -132,7 +132,7 @@ public class GameController{
 		temp = v;
 		Inventory i = temp.getinventory();
 		List<Gear> geras = i.GetGears();
-		OutFrame o = new OutFrame(geras, 1, 0, this);
+		new OutFrame(geras, 1, 0, this);
 	}
 	/**
 	 * Miután választottunk virológust, utána kiválasztjuk, hogy mit szeretnénk lopni tõle
@@ -154,7 +154,7 @@ public class GameController{
 		temp = v;
 		Inventory i = main.getinventory();
 		List<Agens> agens = i.GetAgens();
-		OutFrame o = new OutFrame(agens, 3, 0, this);
+		new OutFrame(agens, 3, 0, this);
 		RajzolMinden();
 		
 	}
@@ -202,22 +202,22 @@ public class GameController{
 		if(milyen == 0) {//Steal
 			Field f = main.getField();
 			List<Virologist> vir = f.getVirologist();
-			OutFrame o = new OutFrame(vir, 2, this);
+			new OutFrame(vir, 2, this);
 		}
 		if(milyen == 1) {//Attack
 			Field f = main.getField();
 			List<Virologist> vir = f.getVirologist();
-			OutFrame o = new OutFrame(vir, 2, this);
+			new OutFrame(vir, 2, this);
 		}
 		if(milyen == 2) {//Drop Item
 			Inventory i = main.getinventory();
 			List<Gear> gears = i.GetGears();
-			OutFrame o = new OutFrame(gears,4, 0, this);
+			new OutFrame(gears,4, 0, this);
 		}
 		if(milyen == 3) {//Move
 			Field f = main.getField();
 			List<Field> fields = f.getNeighbors();
-			OutFrame o = new OutFrame(fields, 5, 0, this);
+			new OutFrame(fields, 5, 0, this);
 		}
 		if(milyen == 4) {//PickUp
 			main.PickUp();
@@ -225,7 +225,7 @@ public class GameController{
 		}
 		if(milyen==6) {//Craft
 			List<Code> codes= main.getcode();
-			OutFrame o = new OutFrame(codes, 6, 'a', this);
+			new OutFrame(codes, 6, 'a', this);
 		}
 		
 	}
@@ -266,13 +266,13 @@ public class GameController{
 		int cape = 0;
 		int axe=0;
 		for(Gear g1: gears) {
-			if(g1.getClass()==new Glove().getClass())
+			if(g1 instanceof Glove)
 				glove++;
-			if(g1.getClass()==new BackPack().getClass())
+			if(g1 instanceof BackPack)
 				backPack++;
-			if(g1.getClass()==new Cape().getClass())
+			if(g1 instanceof Cape)
 				cape++;
-			if(g1.getClass()==new Axe().getClass())
+			if(g1 instanceof Axe)
 				axe++;
 		}
 		jatekframe.drawInventory(glove, 1,g);//glove
@@ -285,13 +285,13 @@ public class GameController{
 		int stunV=0;
 		int vaccine=0;
 		for(Agens a: agens) {
-			if(a.getClass()==new MemoryLossV().getClass())
+			if(a instanceof MemoryLossV)
 				memoryLossV++;
-			if(a.getClass()==new VitusDanceV().getClass())
+			if(a instanceof VitusDanceV)
 				vitusDanceV++;
-			if(a.getClass()==new StunV().getClass())
+			if(a instanceof StunV)
 				stunV++;
-			if(a.getClass()==new Vaccine().getClass())
+			if(a instanceof Vaccine)
 				vaccine++;
 		}
 		jatekframe.drawInventory(memoryLossV, 5,g);//MemoryLossV
@@ -318,7 +318,7 @@ public class GameController{
 	 */
 	public void JatekVege() {
 		jatekframe.setVisible(false);
-		WinFrame wf = new WinFrame();
+		new WinFrame();
 		
 	}
 }
