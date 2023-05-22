@@ -8,4 +8,4 @@ A cél, hogy a feladat végére egy összességében jobban működő, stabilabb
 
 ### Termék/felhasználó fókusz
 - UI tesztek készítése (Selenium)
-- Manuális tesztek megtervezése, végrehajtása
+- Manuális tesztek megtervezése, végrehajtása 
