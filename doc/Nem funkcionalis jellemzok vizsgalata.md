@@ -6,9 +6,9 @@ A mért értékek vizsgálatát a GPU-Z és a CORE Temp programmal vizsgáltuk.
 
 ### Futtatás előtt:
 
-![alt text](nfjv1.png)
+![alt text](nfjv1.PNG)
 
-![alt text](nfjv2.png)
+![alt text](nfjv2.PNG)
 
 ### Futtatás után:
 
@@ -28,23 +28,23 @@ Manuálisan végeztük el a tesztet.
 - Az operációs rendszerben a feliratok 150%-ra növelése nem változtatott az alkalmazás szövegén. 
 - A kontraszt átállítását érzékelte és az alapján át is állítódott:
 
-![alt text](nfjv5.png)
+![alt text](nfjv5.PNG)
 
 - A move ablakban nagyon kicsik a gombok nehéz olvasni őket, az ablak kitakarja a játék pályát, ezzel is megnehezítve a játékos dolgát:
-![alt text](nfjv6.png)
+![alt text](nfjv6.PNG)
 
 - A craft kód gombjainak felirata bonyolult és csúnya, illetve nem ad figyelmeztetést, ha nem sikerült a craftolás:
-![alt text](nfjv7.png)
+![alt text](nfjv7.PNG)
 
 - A színszűrők használatára jól reagált az alkalmazás:
-![alt text](nfjv8.png)
-![alt text](nfjv9.png)
+![alt text](nfjv8.PNG)
+![alt text](nfjv9.PNG)
 
 - A map ablak átméretezésével a rajta lévő elemeket el lehet tűntetni(pl: alsó gombok).
-![alt text](nfjv10.png)
+![alt text](nfjv10.PNG)
 
 - A játék végét jelző ablak felirata nem látható:
-![alt text](nfjv11.png)
+![alt text](nfjv11.PNG)
 
 ## Összegzésként
 
