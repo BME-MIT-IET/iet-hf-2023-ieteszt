@@ -12,9 +12,9 @@ A mért értékek vizsgálatát a GPU-Z és a CORE Temp programmal vizsgáltuk.
 
 ### Futtatás után:
 
-![alt text](nfjv3.png)
+![alt text](nfjv3.PNG)
 
-![alt text](nfjv4.png)
+![alt text](nfjv4.PNG)
 
 A GPU terhelése független a programunk futásától. A CPU magok átlagosan 20 százalékos plussz terhelést kaptak a program futtatásától.
 
