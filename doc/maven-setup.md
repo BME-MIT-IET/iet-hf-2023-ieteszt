@@ -1,3 +1,5 @@
+Végezte: Balázs Martin, Lenkovics Ákos
+
 ## GitHub Actions felállítása
 A GitHubon a projekt Actions oldalán a Java with Maven gomb megnyomásával a GitHub generálta a maven.yml fájlt.
 Ezzel a CI része készen van.
