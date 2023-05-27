@@ -126,52 +126,52 @@ public class GameFrame extends JFrame {
 			if(hanydb==0) 
 				imgurl="./Pictures/NucleotidBW.png";
 			else 
-				imgurl="./Pictures/NucleotidI.png";
+				imgurl="./Pictures/Nucleotid.png";
 		}		if(milyen==1) {
 			if(hanydb==0)
 				imgurl="./Pictures/GloveBW.png";
 			else
-				imgurl="./Pictures/GloveI.png";
+				imgurl="./Pictures/Glove.png";
 		}		if(milyen==2) {
 			if(hanydb==0)
 				imgurl="./Pictures/BackpackBW.png";
 			else
-				imgurl="./Pictures/BackpackI.png";
+				imgurl="./Pictures/Backpack.png";
 		}		if(milyen==3) {
 			if(hanydb==0)
 				imgurl="./Pictures/CapeBW.png";
 			else
-				imgurl="./Pictures/CapeI.png";
+				imgurl="./Pictures/Cape.png";
 		}		if(milyen==4) {
 			if(hanydb==0)
 				imgurl="./Pictures/AxeBW.png";
 			else
-				imgurl="./Pictures/AxeI.png";
+				imgurl="./Pictures/Axe.png";
 		}		if(milyen==5) {
 			if(hanydb==0)
 				imgurl="./Pictures/MemoryLossVBW.png";
 			else
-				imgurl="./Pictures/MemoryLossVI.png";
+				imgurl="./Pictures/MemoryLossV.png";
 		}		if(milyen==6) {
 			if(hanydb==0)
 				imgurl="./Pictures/VitusDanceVBW.png";
 			else
-				imgurl="./Pictures/VitusDanceI.png";
+				imgurl="./Pictures/VitusDance.png";
 		}		if(milyen==7) {
 			if(hanydb==0)
 				imgurl="./Pictures/StunVBW.png";
 			else
-				imgurl="./Pictures/StunVI.png";
+				imgurl="./Pictures/StunV.png";
 		}		if(milyen==8) {
 			if(hanydb==0)
 				imgurl="./Pictures/VaccineBW.png";
 			else
-				imgurl="./Pictures/VaccineI.png";
+				imgurl="./Pictures/Vaccine.png";
 		}		if(milyen==9) {
 			if(hanydb==0)
 				imgurl="./Pictures/AminoAcidBW.png";
 			else
-				imgurl="./Pictures/AminoAcidI.png";
+				imgurl="./Pictures/AminoAcid.png";
 		}
 		Image image;
 		image = Toolkit.getDefaultToolkit().getImage(imgurl);
